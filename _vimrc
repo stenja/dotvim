@@ -29,6 +29,7 @@ endfunction
 call pathogen#infect()
 color jellybeans
 
+set guioptions=
 set nobackup
 set nowritebackup
 nmap <silent> <C-h> :wincmd h<CR>
