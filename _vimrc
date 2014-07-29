@@ -56,3 +56,4 @@ let g:miniBufExplSortBy = 'mru'
 set completeopt=longest,menuone,preview
 autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python let g:SuperTabDefaultCompletionType = "context"
+cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
