@@ -42,6 +42,7 @@ nmap <silent> <C-Right> :vertical resize +1<CR>
 nmap <silent> <C-Up> :resize -1<CR>
 nmap <silent> <C-Down> :resize +1<CR>
 nmap <silent> <F8> :NERDTreeToggle<CR>
+nmap <silent> <S-F8> :NERDTreeCWD<CR>
 nmap <silent> <F9> :TlistToggle<CR>
 nmap <silent> <F10> :SrcExplToggle<CR>
 nmap <silent> <C-Tab> :MBEbb<CR>
