@@ -32,6 +32,7 @@ color jellybeans
 set guioptions=
 set nobackup
 set nowritebackup
+set hidden
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
@@ -43,11 +44,14 @@ nmap <silent> <C-Down> :resize +1<CR>
 nmap <silent> <F8> :NERDTreeToggle<CR>
 nmap <silent> <F9> :TlistToggle<CR>
 nmap <silent> <F10> :SrcExplToggle<CR>
-
+nmap <silent> <C-Tab> :MBEbb<CR>
+nmap <silent> <C-S-Tab> :MBEbf<CR>
 set ignorecase
 set smartcase
 set number
 let g:completekey = '<C-Tab>'
+let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplSortBy = 'mru'
 set completeopt=longest,menuone,preview
 autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python let g:SuperTabDefaultCompletionType = "context"
