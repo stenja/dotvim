@@ -48,7 +48,7 @@ nmap <silent> <F9> :TlistToggle<CR>
 nmap <silent> <F10> :SrcExplToggle<CR>
 nmap <silent> <C-Tab> :MBEbb<CR>
 nmap <silent> <C-S-Tab> :MBEbf<CR>
-nmap <silent> <C-S-k> :A<CR>
+nmap <silent> <A-k> :FSHere<CR>
 set ignorecase
 set smartcase
 set number
