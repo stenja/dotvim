@@ -26,7 +26,6 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
 call pathogen#infect()
 color jellybeans
 
@@ -49,6 +48,7 @@ nmap <silent> <F10> :SrcExplToggle<CR>
 nmap <silent> <C-Tab> :MBEbb<CR>
 nmap <silent> <C-S-Tab> :MBEbf<CR>
 nmap <silent> <A-k> :FSHere<CR>
+nmap <silent> <A-w> :MBEbd<CR>
 set ignorecase
 set smartcase
 set number
@@ -57,6 +57,7 @@ let g:jedi#popup_on_dot = 0
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplSortBy = 'mru'
+let g:miniBufExplCycleArround = 1
 let NERDTreeMouseMode = 2
 set completeopt=longest,menuone,preview
 "autocmd FileType python setlocal omnifunc=python3complete#Complete
