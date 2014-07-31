@@ -49,6 +49,8 @@ nmap <silent> <C-Tab> :MBEbb<CR>
 nmap <silent> <C-S-Tab> :MBEbf<CR>
 nmap <silent> <A-k> :FSHere<CR>
 nmap <silent> <A-w> :MBEbd<CR>
+nmap <silent> <A-u> :GundoToggle<CR>
+nmap <A-d> <Plug>(easymotion-bd-w)
 set ignorecase
 set smartcase
 set number
@@ -59,6 +61,8 @@ let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplSortBy = 'mru'
 let g:miniBufExplCycleArround = 1
 let NERDTreeMouseMode = 2
+let g:gundo_prefer_python3=1
+let g:gundo_right=1
 set completeopt=longest,menuone,preview
 "autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python setlocal omnifunc=jedi#completions
