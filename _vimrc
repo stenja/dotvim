@@ -45,24 +45,23 @@ nmap <silent> <F8> :NERDTreeToggle<CR>
 nmap <silent> <S-F8> :NERDTreeCWD<CR>
 nmap <silent> <F9> :TlistToggle<CR>
 nmap <silent> <F10> :SrcExplToggle<CR>
-nmap <silent> <C-Tab> :MBEbb<CR>
-nmap <silent> <C-S-Tab> :MBEbf<CR>
+nmap <silent> <C-Tab> :bn<CR>
+nmap <silent> <C-S-Tab> :bp<CR>
 nmap <silent> <A-k> :FSHere<CR>
-nmap <silent> <A-w> :MBEbd<CR>
+nmap <silent> <A-w> :bp <BAR> bd #<CR>
 nmap <silent> <A-u> :GundoToggle<CR>
 nmap <A-d> <Plug>(easymotion-bd-w)
 set ignorecase
 set smartcase
 set number
-let g:completekey = '<C-Tab>'
 let g:jedi#popup_on_dot = 0
 let g:SuperTabClosePreviewOnPopupClose = 1
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplSortBy = 'mru'
-let g:miniBufExplCycleArround = 1
 let NERDTreeMouseMode = 2
 let g:gundo_prefer_python3=1
 let g:gundo_right=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#buffer_nr_show = 1
 set completeopt=longest,menuone,preview
 "autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python setlocal omnifunc=jedi#completions
