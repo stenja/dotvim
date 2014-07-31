@@ -48,13 +48,16 @@ nmap <silent> <F10> :SrcExplToggle<CR>
 nmap <silent> <C-Tab> :bn<CR>
 nmap <silent> <C-S-Tab> :bp<CR>
 nmap <silent> <A-k> :FSHere<CR>
-nmap <silent> <A-w> :bp <BAR> bd #<CR>
+nmap <silent> <A-w> :Bclose<CR>
+nmap <silent> <A-q> :Bclose!<CR>
 nmap <silent> <A-u> :GundoToggle<CR>
 nmap <A-d> <Plug>(easymotion-bd-w)
 set ignorecase
 set smartcase
 set number
 let g:jedi#popup_on_dot = 0
+let g:EasyMotion_off_screen_search = 0
+let g:EasyMotion_do_shade = 0
 let g:SuperTabClosePreviewOnPopupClose = 1
 let NERDTreeMouseMode = 2
 let g:gundo_prefer_python3=1
