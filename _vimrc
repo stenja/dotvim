@@ -63,6 +63,7 @@ endwhile
 set ignorecase
 set smartcase
 set number
+let g:completekey = "<C-Space>"
 let g:jedi#popup_on_dot = 0
 let g:EasyMotion_off_screen_search = 0
 let g:jedi#goto_assignments_command = ""
