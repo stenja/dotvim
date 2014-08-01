@@ -33,6 +33,7 @@ set guioptions=
 set nobackup
 set nowritebackup
 set hidden
+set directory=$HOME//
 let mapleader = ","
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
