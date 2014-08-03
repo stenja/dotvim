@@ -34,3 +34,6 @@
 [submodule "vimfiles/bundle/fswitch"]
 	path = vimfiles/bundle/fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
+[submodule "vimfiles/bundle/SrcExpl"]
+	path = vimfiles/bundle/SrcExpl
+	url = https://github.com/wesleyche/SrcExpl.git
