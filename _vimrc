@@ -80,4 +80,5 @@ set completeopt=longest,menuone,preview
 "autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType python let g:SuperTabDefaultCompletionType = "context"
+autocmd FileType python nmap <F5> :w !python -<CR>:redraw!<CR>
 

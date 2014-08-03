@@ -1,0 +1,36 @@
+[submodule "vimfiles/bundle/code_complete"]
+	path = vimfiles/bundle/code_complete
+	url = https://github.com/mbbill/code_complete.git
+[submodule "vimfiles/bundle/gundo"]
+	path = vimfiles/bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "vimfiles/bundle/jedi-vim"]
+	path = vimfiles/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vimfiles/bundle/autotag"]
+	path = vimfiles/bundle/autotag
+	url = https://github.com/craigemery/vim-autotag.git
+[submodule "vimfiles/bundle/jellybeans"]
+	path = vimfiles/bundle/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "vimfiles/bundle/nerdtree"]
+	path = vimfiles/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vimfiles/bundle/omnicppcomplete"]
+	path = vimfiles/bundle/omnicppcomplete
+	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "vimfiles/bundle/python-syntax"]
+	path = vimfiles/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git
+[submodule "vimfiles/bundle/supertab"]
+	path = vimfiles/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "vimfiles/bundle/airline"]
+	path = vimfiles/bundle/airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "vimfiles/bundle/easymotion"]
+	path = vimfiles/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vimfiles/bundle/fswitch"]
+	path = vimfiles/bundle/fswitch
+	url = https://github.com/derekwyatt/vim-fswitch.git
