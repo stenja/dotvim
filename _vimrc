@@ -52,6 +52,7 @@ nmap <silent> <leader>q :Bclose!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>g <Plug>(easymotion-bd-w)
 nmap <silent> <leader>r :set relativenumber!<CR>
+nmap <silent> <leader>l :set wrap!<CR>
 let c = 1
 while c < 100 
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
@@ -60,7 +61,7 @@ endwhile
 set ignorecase
 set smartcase
 set number
-set guifont=Consolas:h10:cANSI
+set guifont=Consolas:h9:cANSI
 set directory=$HOME//
 let g:completekey = "<C-Space>"
 let g:jedi#popup_on_dot = 0
