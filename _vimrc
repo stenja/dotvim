@@ -39,6 +39,8 @@ nmap <silent> <C-Up> :resize -1<CR>
 nmap <silent> <C-Down> :resize +1<CR>
 nmap <silent> <C-Tab> :bn<CR>
 nmap <silent> <C-S-Tab> :bp<CR>
+inoremap ii <Esc>
+vnoremap ii <Esc>
 nmap <silent> <leader>h :noh<CR>
 nmap <silent> <leader>s :FSHere<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
@@ -49,6 +51,7 @@ nmap <silent> <leader>w :Bclose<CR>
 nmap <silent> <leader>q :Bclose!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>g <Plug>(easymotion-bd-w)
+nmap <silent> <leader>r :set relativenumber!<CR>
 let c = 1
 while c < 100 
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
