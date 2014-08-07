@@ -28,7 +28,7 @@ set nobackup
 set nowritebackup
 set hidden
 set directory=$HOME//
-let mapleader = ","
+let mapleader=","
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
@@ -53,7 +53,7 @@ nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>g <Plug>(easymotion-bd-w)
 nmap <leader>r :set relativenumber! relativenumber?<CR>
 nmap <leader>l :set wrap! wrap?<CR>
-let c = 1
+let c=1
 while c < 100 
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
@@ -63,26 +63,28 @@ set smartcase
 set number
 set guifont=Consolas:h9:cANSI
 set directory=$HOME//
-let g:completekey = "<C-Space>"
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = ""
-let g:jedi#goto_definitions_command = ""
-let g:jedi#documentation_command = ""
-let g:jedi#usages_command = ""
-let g:jedi#completions_command = ""
-let g:jedi#rename_command = ""
-let g:EasyMotion_off_screen_search = 0
-let g:EasyMotion_do_shade = 0
-let g:SuperTabClosePreviewOnPopupClose = 1
-let NERDTreeMouseMode = 2
+let g:completekey="<C-Space>"
+let g:jedi#popup_on_dot=0
+let g:jedi#goto_assignments_command=""
+let g:jedi#goto_definitions_command=""
+let g:jedi#documentation_command=""
+let g:jedi#usages_command=""
+let g:jedi#completions_command=""
+let g:jedi#rename_command=""
+let g:EasyMotion_off_screen_search=0
+let g:EasyMotion_do_shade=0
+let g:SuperTabClosePreviewOnPopupClose=1
+let NERDTreeMouseMode=2
 let g:gundo_prefer_python3=1
 let g:gundo_right=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline#extensions#tabline#buffer_nr_show=1
+let g:EasyGrepRecursive=1
+let g:EasyGrepWindow=1
 set completeopt=longest,menuone,preview
 "autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python setlocal omnifunc=jedi#completions
-autocmd FileType python let g:SuperTabDefaultCompletionType = "context"
+autocmd FileType python let g:SuperTabDefaultCompletionType="context"
 autocmd FileType python nmap <F5> :w !python -<CR>:redraw!<CR>
 
