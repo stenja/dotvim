@@ -23,7 +23,7 @@ endif
 call pathogen#infect()
 color jellybeans
 
-set guioptions=
+set guioptions=r
 set nobackup
 set nowritebackup
 set hidden
