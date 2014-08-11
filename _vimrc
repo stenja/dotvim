@@ -29,6 +29,7 @@ set nowritebackup
 set hidden
 set directory=$HOME//
 let mapleader=","
+map <MiddleMouse> <Nop>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
