@@ -14,6 +14,7 @@ set smartcase
 set number
 set guifont=Consolas:h9:cANSI
 set directory=$HOME//
+set scrolloff=2
 let mapleader=","
 if has('mouse')
   set mouse=a
