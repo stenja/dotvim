@@ -4,6 +4,17 @@ set history=100
 set ruler
 set showcmd
 set incsearch
+set guioptions=r
+set nobackup
+set nowritebackup
+set hidden
+set directory=$HOME//
+set ignorecase
+set smartcase
+set number
+set guifont=Consolas:h9:cANSI
+set directory=$HOME//
+let mapleader=","
 if has('mouse')
   set mouse=a
 endif
@@ -23,12 +34,6 @@ endif
 call pathogen#infect()
 color jellybeans
 
-set guioptions=r
-set nobackup
-set nowritebackup
-set hidden
-set directory=$HOME//
-let mapleader=","
 map <MiddleMouse> <Nop>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -40,6 +45,7 @@ nmap <silent> <C-Up> :resize -1<CR>
 nmap <silent> <C-Down> :resize +1<CR>
 nmap <silent> <C-Tab> :bn<CR>
 nmap <silent> <C-S-Tab> :bp<CR>
+imap <C-BS> <C-W>
 inoremap ii <Esc>
 vnoremap ii <Esc>
 nmap <silent> <leader>h :noh<CR>
@@ -59,11 +65,6 @@ while c < 100
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
-set ignorecase
-set smartcase
-set number
-set guifont=Consolas:h9:cANSI
-set directory=$HOME//
 let g:completekey="<C-Space>"
 let g:jedi#popup_on_dot=0
 let g:jedi#goto_assignments_command=""
