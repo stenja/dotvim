@@ -85,6 +85,7 @@ let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:EasyGrepRecursive=1
 let g:EasyGrepWindow=1
+let g:autotagExcludeSuffixes="tml.xml.text.txt.ini"
 set completeopt=longest,menuone,preview
 "autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType python setlocal omnifunc=jedi#completions
