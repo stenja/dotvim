@@ -16,9 +16,6 @@ set guifont=Consolas:h9:cANSI
 set directory=$HOME//
 set scrolloff=2
 let mapleader=","
-if has('mouse')
-  set mouse=a
-endif
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
@@ -91,4 +88,5 @@ set completeopt=longest,menuone,preview
 autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType python let g:SuperTabDefaultCompletionType="context"
 autocmd FileType python nmap <F5> :w !python -<CR>:redraw!<CR>
+set mouse=
 
