@@ -12,7 +12,7 @@ set directory=$HOME//
 set ignorecase
 set smartcase
 set number
-set guifont=Consolas:h9:cANSI
+set guifont=DejaVu\ Sans\ Mono\ 9,Consolas:h9:cANSI
 set directory=$HOME//
 set scrolloff=2
 let mapleader=","
@@ -58,6 +58,10 @@ nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>g <Plug>(easymotion-bd-w)
 nmap <leader>r :set relativenumber! relativenumber?<CR>
 nmap <leader>l :set wrap! wrap?<CR>
+nmap ]q :cnext<CR>
+nmap [q :cprevious<CR>
+nmap ]t :bn<CR>
+nmap [t :bp<CR>
 let c=1
 while c < 100 
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
