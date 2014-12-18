@@ -58,10 +58,10 @@ nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>g <Plug>(easymotion-bd-w)
 nmap <leader>r :set relativenumber! relativenumber?<CR>
 nmap <leader>l :set wrap! wrap?<CR>
-nmap ]q :cnext<CR>
-nmap [q :cprevious<CR>
-nmap ]t :bn<CR>
-nmap [t :bp<CR>
+nmap <silent> ]q :cnext<CR>
+nmap <silent> [q :cprevious<CR>
+nmap <silent> ]t :bn<CR>
+nmap <silent> [t :bp<CR>
 let c=1
 while c < 100 
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
