@@ -29,6 +29,7 @@ if has("autocmd")
 else
   set autoindent
 endif
+let g:pathogen_disabled = ['autotag']
 call pathogen#infect()
 color jellybeans
 
