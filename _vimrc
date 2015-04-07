@@ -8,13 +8,15 @@ set guioptions=r
 set nobackup
 set nowritebackup
 set hidden
-set directory=$HOME//
 set ignorecase
 set smartcase
 set number
 set guifont=DejaVu\ Sans\ Mono\ 9,Consolas:h9:cANSI
-set directory=$HOME//
 set scrolloff=2
+if !isdirectory($HOME."/vim_swap")
+	call mkdir($HOME."/vim_swap", "p")
+endif
+set directory=$HOME/vim_swap//
 let mapleader=","
 if &t_Co > 2 || has("gui_running")
   syntax on
