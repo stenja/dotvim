@@ -31,7 +31,6 @@ if has("autocmd")
 else
   set autoindent
 endif
-let g:pathogen_disabled = ['autotag']
 call pathogen#infect()
 color jellybeans
 
@@ -53,8 +52,6 @@ nmap <silent> <leader>h :noh<CR>
 nmap <silent> <leader>s :FSHere<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>m :NERDTreeCWD<CR>
-nmap <silent> <leader>t :TlistToggle<CR>
-nmap <silent> <leader>b :SrcExplToggle<CR>
 nmap <silent> <leader>w :Bclose<CR>
 nmap <silent> <leader>q :Bclose!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
@@ -70,14 +67,6 @@ while c < 100
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
-let g:completekey="<C-Space>"
-let g:jedi#popup_on_dot=0
-let g:jedi#goto_assignments_command=""
-let g:jedi#goto_definitions_command=""
-let g:jedi#documentation_command=""
-let g:jedi#usages_command=""
-let g:jedi#completions_command=""
-let g:jedi#rename_command=""
 let g:EasyMotion_off_screen_search=0
 let g:EasyMotion_do_shade=0
 let g:SuperTabClosePreviewOnPopupClose=1
@@ -89,11 +78,5 @@ let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:EasyGrepRecursive=1
 let g:EasyGrepWindow=1
-let g:autotagExcludeSuffixes="tml.xml.text.txt.ini"
 set completeopt=longest,menuone,preview
-"autocmd FileType python setlocal omnifunc=python3complete#Complete
-autocmd FileType python setlocal omnifunc=jedi#completions
-autocmd FileType python let g:SuperTabDefaultCompletionType="context"
-autocmd FileType python nmap <F5> :w !python -<CR>:redraw!<CR>
 set mouse=
-
