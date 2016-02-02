@@ -34,3 +34,6 @@
 [submodule "vimfiles/bundle/nerdcommenter"]
 	path = vimfiles/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vimfiles/bundle/airline-themes"]
+	path = vimfiles/bundle/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
