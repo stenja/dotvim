@@ -56,6 +56,8 @@ nmap <silent> <leader>w :Bclose<CR>
 nmap <silent> <leader>q :Bclose!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>g <Plug>(easymotion-bd-w)
+nmap <silent> <leader>a "+
+vmap <silent> <leader>a "+
 nmap <leader>r :set relativenumber! relativenumber?<CR>
 nmap <leader>l :set wrap! wrap?<CR>
 nmap <silent> ]q :cnext<CR>
