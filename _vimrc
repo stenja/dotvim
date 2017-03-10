@@ -71,7 +71,6 @@ while c < 100
 endwhile
 let g:EasyMotion_off_screen_search=0
 let g:EasyMotion_do_shade=0
-let g:SuperTabClosePreviewOnPopupClose=1
 let NERDTreeMouseMode=2
 let g:gundo_prefer_python3=1
 let g:gundo_right=1
