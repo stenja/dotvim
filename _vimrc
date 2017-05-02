@@ -1,3 +1,4 @@
+set rtp+=~/.fzf
 set nocompatible
 set backspace=indent,eol,start
 set history=100
@@ -64,6 +65,7 @@ nmap <silent> ]q :cnext<CR>
 nmap <silent> [q :cprevious<CR>
 nmap <silent> ]t :bn<CR>
 nmap <silent> [t :bp<CR>
+nmap <silent> <C-t> :FZF<CR>
 let c=1
 while c < 100 
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
