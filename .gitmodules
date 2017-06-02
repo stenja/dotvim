@@ -31,3 +31,6 @@
 [submodule "vimfiles/bundle/airline-themes"]
 	path = vimfiles/bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vimfiles/bundle/fzf"]
+	path = vimfiles/bundle/fzf
+	url = https://github.com/junegunn/fzf.vim.git

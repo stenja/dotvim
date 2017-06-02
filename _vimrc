@@ -20,26 +20,22 @@ endif
 set directory=$HOME/vim_swap//
 let mapleader=","
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
+	syntax on
+	set hlsearch
 endif
 if has("autocmd")
-  filetype plugin indent on
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+	filetype plugin indent on
+	autocmd BufReadPost *
+	\ if line("'\"") > 1 && line("'\"") <= line("$") |
+	\   exe "normal! g`\"" |
+	\ endif
 else
-  set autoindent
+	set autoindent
 endif
 call pathogen#infect()
 color jellybeans
 
 map <MiddleMouse> <Nop>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-l> :wincmd l<CR>
 nmap <silent> <C-Left> :vertical resize -1<CR>
 nmap <silent> <C-Right> :vertical resize +1<CR>
 nmap <silent> <C-Up> :resize -1<CR>
@@ -66,8 +62,17 @@ nmap <silent> [q :cprevious<CR>
 nmap <silent> ]t :bn<CR>
 nmap <silent> [t :bp<CR>
 nmap <silent> <C-t> :FZF<CR>
+nmap <silent> <C-b> :Buffers<CR>
+nmap <silent> <C-l> :Lines<CR>
+nmap <silent> <C-k> :BLines<CR>
+nmap <silent> <C-j> yiw:Lines <C-r>"<CR>
+nmap <silent> <BS> <C-^>
 let c=1
-while c < 100 
+while c < 10
+	execute "nmap <silent> <leader>0" . c . " :b" . c . "<CR>"
+	let c += 1
+endwhile
+while c < 100
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
