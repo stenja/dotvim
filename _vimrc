@@ -78,6 +78,7 @@ nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :Lines<CR>
 nmap <silent> <C-k> :BLines<CR>
 nmap <silent> <C-j> yiw:Lines <C-r>"<CR>
+nmap <silent> <leader>j yiw:Ag <C-r>"<CR>
 nmap <silent> <BS> <C-^>
 let c=1
 while c < 10
@@ -100,3 +101,5 @@ let g:EasyGrepRecursive=1
 let g:EasyGrepWindow=1
 set completeopt=longest,menuone,preview
 set mouse=
+set wildmenu
+set wildmode=longest:full,full
