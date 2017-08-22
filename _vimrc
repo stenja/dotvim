@@ -97,8 +97,6 @@ let g:gundo_right=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
-let g:EasyGrepRecursive=1
-let g:EasyGrepWindow=1
 set completeopt=longest,menuone,preview
 set mouse=
 set wildmenu

@@ -16,9 +16,6 @@
 [submodule "vimfiles/bundle/fswitch"]
 	path = vimfiles/bundle/fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
-[submodule "vimfiles/bundle/easygrep"]
-	path = vimfiles/bundle/easygrep
-	url = https://github.com/dkprice/vim-easygrep.git
 [submodule "vimfiles/bundle/surround"]
 	path = vimfiles/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
