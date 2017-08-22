@@ -77,8 +77,8 @@ nmap <silent> <C-t> :FZF<CR>
 nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :Lines<CR>
 nmap <silent> <C-k> :BLines<CR>
-nmap <silent> <C-j> yiw:Lines <C-r>"<CR>
-nmap <silent> <leader>j yiw:Ag <C-r>"<CR>
+nmap <silent> <C-j> :Lines <C-r><C-w><CR>
+nmap <silent> <leader>j :Ag <C-r><C-w><CR>
 nmap <silent> <BS> <C-^>
 let c=1
 while c < 10
