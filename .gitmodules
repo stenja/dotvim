@@ -31,3 +31,6 @@
 [submodule "vimfiles/bundle/sneak"]
 	path = vimfiles/bundle/sneak
 	url = https://github.com/justinmk/vim-sneak.git
+[submodule "vimfiles/bundle/over"]
+	path = vimfiles/bundle/over
+	url = https://github.com/osyo-manga/vim-over.git

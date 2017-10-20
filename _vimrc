@@ -65,7 +65,8 @@ nmap <silent> <leader>q :Bclose!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
 nmap <silent> <leader>a "+
 vmap <silent> <leader>a "+
-nmap <leader>r :set relativenumber! relativenumber?<CR>
+nmap <silent> <leader>r :OverCommandLine<CR>%s/
+vmap <silent> <leader>r :OverCommandLine<CR>s/
 nmap <leader>l :set wrap! wrap?<CR>
 nmap <silent> ]q :cnext<CR>
 nmap <silent> [q :cprevious<CR>
@@ -93,9 +94,10 @@ let g:gundo_right=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
-let g:sneak#label = 1
-let g:sneak#use_ic_scs = 1
-let g:sneak#target_labels = "asdfjkl;ghqweruioptyvnASDFJKLWERTOIU"
+let g:sneak#label=1
+let g:sneak#use_ic_scs=1
+let g:sneak#target_labels="asdfjkl;ghqweruioptyvnASDFJKLWERTOIU"
+let g:over_command_line_key_mappings={ "\<C-g>" : "\<Esc>", }
 set completeopt=longest,menuone,preview
 set mouse=
 set wildmenu
