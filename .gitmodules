@@ -43,3 +43,6 @@
 [submodule "vimfiles/bundle/gitgutter"]
 	path = vimfiles/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vimfiles/bundle/abolish"]
+	path = vimfiles/bundle/abolish
+	url = https://github.com/tpope/vim-abolish.git
