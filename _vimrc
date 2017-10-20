@@ -12,6 +12,7 @@ set hidden
 set ignorecase
 set smartcase
 set number
+set encoding=utf-8
 set guifont=DejaVu\ Sans\ Mono\ 9,Consolas:h9:cANSI
 set scrolloff=2
 if !isdirectory($HOME."/vim_swap")
