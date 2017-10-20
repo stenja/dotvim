@@ -54,7 +54,6 @@ nmap <silent> <C-Up> :resize -1<CR>
 nmap <silent> <C-Down> :resize +1<CR>
 nmap <silent> <C-Tab> :bn<CR>
 nmap <silent> <C-S-Tab> :bp<CR>
-imap <C-BS> <C-W>
 inoremap ii <Esc>
 vnoremap ii <Esc>
 nmap <silent> <leader>h :noh<CR>
