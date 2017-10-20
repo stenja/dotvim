@@ -95,6 +95,7 @@ let g:gundo_right=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
+set laststatus=2
 let g:sneak#label=1
 let g:sneak#use_ic_scs=1
 let g:sneak#target_labels="asdfjkl;ghqweruioptyvnASDFJKLWERTOIU"
