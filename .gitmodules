@@ -37,3 +37,6 @@
 [submodule "vimfiles/bundle/bufkill"]
 	path = vimfiles/bundle/bufkill
 	url = https://github.com/qpkorr/vim-bufkill.git
+[submodule "vimfiles/bundle/sleuth"]
+	path = vimfiles/bundle/sleuth
+	url = https://github.com/tpope/vim-sleuth.git
