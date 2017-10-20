@@ -63,7 +63,6 @@ nmap <silent> <leader>m :NERDTreeCWD<CR>
 nmap <silent> <leader>w :Bclose<CR>
 nmap <silent> <leader>q :Bclose!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
-nmap <silent> <leader>g <Plug>(easymotion-bd-w)
 nmap <silent> <leader>a "+
 vmap <silent> <leader>a "+
 nmap <leader>r :set relativenumber! relativenumber?<CR>
@@ -88,14 +87,15 @@ while c < 100
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
-let g:EasyMotion_off_screen_search=0
-let g:EasyMotion_do_shade=0
 let NERDTreeMouseMode=2
 let g:gundo_prefer_python3=1
 let g:gundo_right=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
+let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1
+let g:sneak#target_labels = "asdfjkl;ghqweruioptyvnASDFJKLWERTOIU"
 set completeopt=longest,menuone,preview
 set mouse=
 set wildmenu

@@ -10,9 +10,6 @@
 [submodule "vimfiles/bundle/airline"]
 	path = vimfiles/bundle/airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "vimfiles/bundle/easymotion"]
-	path = vimfiles/bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "vimfiles/bundle/fswitch"]
 	path = vimfiles/bundle/fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
@@ -31,3 +28,6 @@
 [submodule "vimfiles/bundle/fzf"]
 	path = vimfiles/bundle/fzf
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vimfiles/bundle/sneak"]
+	path = vimfiles/bundle/sneak
+	url = https://github.com/justinmk/vim-sneak.git
