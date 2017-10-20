@@ -57,6 +57,7 @@ nmap <silent> <C-S-Tab> :bp<CR>
 inoremap ii <Esc>
 vnoremap ii <Esc>
 nmap <silent> <leader>h :noh<CR>
+nmap <silent> <leader>hh :noh<CR>
 nmap <silent> <leader>s :FSHere<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>m :NERDTreeCWD<CR>
@@ -98,7 +99,13 @@ let g:sneak#label=1
 let g:sneak#use_ic_scs=1
 let g:sneak#target_labels="asdfjkl;ghqweruioptyvnASDFJKLWERTOIU"
 let g:over_command_line_key_mappings={ "\<C-g>" : "\<Esc>", }
+let g:gitgutter_sign_added='●'
+let g:gitgutter_sign_removed='●'
+let g:gitgutter_sign_modified='●'
+let g:gitgutter_sign_modified_removed='●_'
+let g:gitgutter_sign_removed_first_line='^^'
 set completeopt=longest,menuone,preview
 set mouse=
 set wildmenu
 set wildmode=longest:full,full
+set updatetime=500
