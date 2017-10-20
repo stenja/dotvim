@@ -34,3 +34,6 @@
 [submodule "vimfiles/bundle/over"]
 	path = vimfiles/bundle/over
 	url = https://github.com/osyo-manga/vim-over.git
+[submodule "vimfiles/bundle/bufkill"]
+	path = vimfiles/bundle/bufkill
+	url = https://github.com/qpkorr/vim-bufkill.git
