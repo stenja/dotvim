@@ -46,3 +46,6 @@
 [submodule "vimfiles/bundle/abolish"]
 	path = vimfiles/bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "vimfiles/bundle/repeat"]
+	path = vimfiles/bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
