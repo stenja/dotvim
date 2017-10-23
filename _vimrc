@@ -61,7 +61,6 @@ nmap <silent> <leader>h :noh<CR>
 nmap <silent> <leader>hh :noh<CR>
 nmap <silent> <leader>s :FSHere<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
-nmap <silent> <leader>m :NERDTreeCWD<CR>
 nmap <silent> <leader>w :BW<CR>
 nmap <silent> <leader>q :BW!<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
