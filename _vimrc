@@ -78,7 +78,15 @@ nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :Lines<CR>
 nmap <silent> <C-k> :BLines<CR>
 nmap <silent> <C-j> :Lines <C-r><C-w><CR>
-nmap <silent> <leader>j :Ag <C-r><C-w><CR>
+if executable('rg')
+	command! -bang -nargs=* Find
+	  \ call fzf#vim#grep('rg -S --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+else
+	cnoreabbrev Find Ag
+endif
+nmap <silent> <leader>j :Find <C-r><C-w><CR>
+vmap <silent> <leader>j y:Find <C-r>"<CR>
+nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
 nmap <silent> <BS> <C-^>
 let c=1
 while c < 10
