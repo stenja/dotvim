@@ -15,10 +15,17 @@ set number
 set encoding=utf-8
 set guifont=DejaVu\ Sans\ Mono\ 9,Consolas:h9:cANSI
 set scrolloff=2
-if !isdirectory($HOME."/vim_swap")
-	call mkdir($HOME."/vim_swap", "p")
+if !isdirectory($HOME."/.tmpvim/swap")
+	call mkdir($HOME."/.tmpvim/swap", "p")
 endif
-set directory=$HOME/vim_swap//
+if !isdirectory($HOME."/.tmpvim/undo")
+	call mkdir($HOME."/.tmpvim/undo", "p")
+endif
+if has("persistent_undo")
+	set undodir=$HOME/.tmpvim/undo//
+	set undofile
+endif
+set directory=$HOME/.tmpvim/swap//
 let mapleader=","
 if &t_Co > 2 || has("gui_running")
 	syntax on
