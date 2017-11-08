@@ -1,6 +1,6 @@
-[submodule "vimfiles/bundle/gundo"]
-	path = vimfiles/bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
+[submodule "vimfiles/bundle/mundo"]
+	path = vimfiles/bundle/mundo
+	url = https://github.com/simnalamburt/vim-mundo.git
 [submodule "vimfiles/bundle/jellybeans"]
 	path = vimfiles/bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim.git

@@ -63,7 +63,7 @@ nmap <silent> <leader>s :FSHere<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>w :BW<CR>
 nmap <silent> <leader>q :BW!<CR>
-nmap <silent> <leader>u :GundoToggle<CR>
+nmap <silent> <leader>u :MundoToggle<CR>
 nmap <silent> <leader>a "+
 vmap <silent> <leader>a "+
 nmap <silent> <leader>r :OverCommandLine<CR>%s/
@@ -98,8 +98,8 @@ while c < 100
 	let c += 1
 endwhile
 let NERDTreeMouseMode=2
-let g:gundo_prefer_python3=1
-let g:gundo_right=1
+let g:mundo_prefer_python3=1
+let g:mundo_right=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#buffer_nr_show=1
