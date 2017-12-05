@@ -104,6 +104,7 @@ nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
 nmap <silent> <BS> <C-^>
 let c=1
 while c < 10
+	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	execute "nmap <silent> <leader>0" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
