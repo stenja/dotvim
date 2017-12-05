@@ -133,3 +133,6 @@ set mouse=
 set wildmenu
 set wildmode=longest:full,full
 set updatetime=500
+if filereadable($HOME."/.vimrclocal")
+	source $HOME/.vimrclocal
+endif
