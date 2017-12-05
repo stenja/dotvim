@@ -54,6 +54,9 @@ function! SetGitDir()
 endfunction
 let g:gitgutter_enabled = 0
 call pathogen#infect()
+autocmd ColorScheme * hi Sneak      guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
+autocmd ColorScheme * hi SneakScope guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
+autocmd ColorScheme * hi SneakLabel guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
 color jellybeans
 
 map <MiddleMouse> <Nop>
@@ -87,6 +90,8 @@ nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :Lines<CR>
 nmap <silent> <C-k> :BLines<CR>
 nmap <silent> <C-j> :Lines <C-r><C-w><CR>
+nmap s <Plug>SneakLabel_s
+nmap S <Plug>SneakLabel_S
 if executable('rg')
 	command! -bang -nargs=* Find
 	  \ call fzf#vim#grep('rg -S --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
@@ -115,7 +120,7 @@ let g:airline#extensions#tabline#buffer_nr_show=1
 set laststatus=2
 let g:sneak#label=1
 let g:sneak#use_ic_scs=1
-let g:sneak#target_labels="asdfjkl;ghqweruioptyvnASDFJKLWERTOIU"
+let g:sneak#prompt="Sneak>"
 let g:over_command_line_key_mappings={ "\<C-g>" : "\<Esc>", }
 let g:gitgutter_sign_added='●'
 let g:gitgutter_sign_removed='●'
