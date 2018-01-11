@@ -87,9 +87,11 @@ nmap <silent> ]t :bn<CR>
 nmap <silent> [t :bp<CR>
 nmap <silent> <C-t> :FZF<CR>
 nmap <silent> <C-b> :Buffers<CR>
-nmap <silent> <C-l> :Lines<CR>
-nmap <silent> <C-k> :BLines<CR>
+nmap <silent> <C-l> :BLines<CR>
+nmap <silent> <C-k> :Lines<CR>
 nmap <silent> <C-j> :Lines <C-r><C-w><CR>
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 if executable('rg')
