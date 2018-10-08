@@ -89,14 +89,13 @@ nmap <silent> <C-t> :FZF<CR>
 nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :BLines<CR>
 nmap <silent> <C-k> :Lines<CR>
-nmap <silent> <C-j> :Lines <C-r><C-w><CR>
+nmap <silent> <C-j> :BLines <C-r><C-w><CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 if executable('rg')
-	command! -bang -nargs=* Find
-	  \ call fzf#vim#grep('rg -S --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+	cnoreabbrev Find Rg
 else
 	cnoreabbrev Find Ag
 endif
