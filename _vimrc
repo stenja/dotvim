@@ -80,6 +80,7 @@ nmap <silent> <leader>a "+
 vmap <silent> <leader>a "+
 nmap <silent> <leader>r :OverCommandLine<CR>%s/
 vmap <silent> <leader>r :OverCommandLine<CR>s/
+vmap // y/\<<C-r>"\><CR>
 nmap <leader>l :set wrap! wrap?<CR>
 nmap <silent> ]q :cnext<CR>
 nmap <silent> [q :cprevious<CR>
