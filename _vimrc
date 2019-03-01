@@ -96,9 +96,9 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 if executable('rg')
-	cnoreabbrev Find Rg
+	command! -nargs=* Find Rg <args>
 else
-	cnoreabbrev Find Ag
+	command! -nargs=* Find Ag <args>
 endif
 nmap <silent> <leader>j :Find <C-r><C-w><CR>
 vmap <silent> <leader>j y:Find <C-r>"<CR>
