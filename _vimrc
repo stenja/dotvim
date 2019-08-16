@@ -12,6 +12,8 @@ set hidden
 set ignorecase
 set smartcase
 set number
+set nowrap
+set cursorline
 set encoding=utf-8
 set guifont=DejaVu\ Sans\ Mono\ 9,Consolas:h9:cANSI
 set scrolloff=2
@@ -57,6 +59,9 @@ call pathogen#infect()
 autocmd ColorScheme * hi Sneak      guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
 autocmd ColorScheme * hi SneakScope guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
 autocmd ColorScheme * hi SneakLabel guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
+autocmd ColorScheme * hi GitGutterAdd		ctermfg=DarkGreen
+autocmd ColorScheme * hi GitGutterChange	ctermfg=DarkBlue
+autocmd ColorScheme * hi GitGutterDelete	ctermfg=DarkRed
 color jellybeans
 
 map <MiddleMouse> <Nop>
@@ -64,8 +69,6 @@ nmap <silent> <C-Left> :vertical resize -1<CR>
 nmap <silent> <C-Right> :vertical resize +1<CR>
 nmap <silent> <C-Up> :resize -1<CR>
 nmap <silent> <C-Down> :resize +1<CR>
-nmap <silent> <C-Tab> :bn<CR>
-nmap <silent> <C-S-Tab> :bp<CR>
 inoremap ii <Esc>
 vnoremap ii <Esc>
 nmap <silent> <leader>h :noh<CR>
@@ -87,6 +90,8 @@ nmap <silent> [q :cprevious<CR>
 nmap <silent> ]t :bn<CR>
 nmap <silent> [t :bp<CR>
 nmap <silent> <C-t> :FZF<CR>
+nmap <silent> <leader>t :FZF %:p:h<CR>
+nmap <silent> <leader>T :FZF %:p:h/..<CR>
 nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :BLines<CR>
 nmap <silent> <C-k> :Lines<CR>
@@ -101,7 +106,9 @@ else
 	command! -nargs=* Find Ag <args>
 endif
 nmap <silent> <leader>j :Find <C-r><C-w><CR>
+nmap <silent> <leader>J :execute 'Find (?-i)\b'.expand("<cword>").'\b'<CR>
 vmap <silent> <leader>j y:Find <C-r>"<CR>
+vmap <silent> <leader>J y:execute 'Find (?-i)\b'.expand("<C-r>"").'\b'<CR>
 nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
 nmap <silent> <BS> <C-^>
 let c=1
