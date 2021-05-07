@@ -62,6 +62,7 @@ autocmd ColorScheme * hi SneakLabel guifg=magenta guibg=#303030 ctermfg=magenta 
 autocmd ColorScheme * hi GitGutterAdd		ctermfg=DarkGreen
 autocmd ColorScheme * hi GitGutterChange	ctermfg=DarkBlue
 autocmd ColorScheme * hi GitGutterDelete	ctermfg=DarkRed
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 color jellybeans
 
 map <MiddleMouse> <Nop>
@@ -102,14 +103,21 @@ nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 if executable('rg')
 	command! -nargs=* Find Rg <args>
+	command! -bang -nargs=* LFind call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>)." ".expand("%:p:h"), 1, fzf#vim#with_preview(), <bang>0)
 else
 	command! -nargs=* Find Ag <args>
+	command! -nargs=* LFind Ag <args>
 endif
 nmap <silent> <leader>j :Find <C-r><C-w><CR>
 nmap <silent> <leader>J :execute 'Find (?-i)\b'.expand("<cword>").'\b'<CR>
+nmap <silent> <leader><C-j> :LFind <C-r><C-w><CR>
+" nmap <silent> <leader><C-J> :execute 'LFind (?-i)\b'.expand("<cword>").'\b'<CR>
 vmap <silent> <leader>j y:Find <C-r>"<CR>
 vmap <silent> <leader>J y:execute 'Find (?-i)\b'.expand("<C-r>"").'\b'<CR>
+vmap <silent> <leader><C-j> y:LFind <C-r>"<CR>
+" vmap <silent> <leader><C-J> y:execute 'LFind (?-i)\b'.expand("<C-r>"").'\b'<CR>
 nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
+nmap <silent> <leader><C-g> :execute 'LFind ' . input('Find/')<CR>
 nmap <silent> <BS> <C-^>
 let c=1
 while c < 10
@@ -123,6 +131,7 @@ while c < 100
 endwhile
 let NERDTreeMouseMode=2
 let g:mundo_prefer_python3=1
+let g:mundo_preview_bottom = 1
 let g:mundo_right=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
