@@ -146,6 +146,7 @@ let g:gitgutter_sign_removed='●'
 let g:gitgutter_sign_modified='●'
 let g:gitgutter_sign_modified_removed='●_'
 let g:gitgutter_sign_removed_first_line='^^'
+let g:fzf_layout = { 'down': '~40%' }
 set completeopt=longest,menuone,preview
 set mouse=
 set wildmenu
