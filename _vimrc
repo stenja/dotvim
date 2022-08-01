@@ -108,14 +108,15 @@ else
 	command! -nargs=* Find Ag <args>
 	command! -nargs=* LFind Ag <args>
 endif
+" find word under cursor
 nmap <silent> <leader>j :Find <C-r><C-w><CR>
-nmap <silent> <leader>J :execute 'Find (?-i)\b'.expand("<cword>").'\b'<CR>
-nmap <silent> <leader><C-j> :LFind <C-r><C-w><CR>
-" nmap <silent> <leader><C-J> :execute 'LFind (?-i)\b'.expand("<cword>").'\b'<CR>
 vmap <silent> <leader>j y:Find <C-r>"<CR>
+" find word under cursor - case sensitive, whole world only
+nmap <silent> <leader>J :execute 'Find (?-i)\b'.expand("<cword>").'\b'<CR>
 vmap <silent> <leader>J y:execute 'Find (?-i)\b'.expand("<C-r>"").'\b'<CR>
+" find word under cursor, only look in current buffer's directory
+nmap <silent> <leader><C-j> :LFind <C-r><C-w><CR>
 vmap <silent> <leader><C-j> y:LFind <C-r>"<CR>
-" vmap <silent> <leader><C-J> y:execute 'LFind (?-i)\b'.expand("<C-r>"").'\b'<CR>
 nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
 nmap <silent> <leader><C-g> :execute 'LFind ' . input('Find/')<CR>
 nmap <silent> <BS> <C-^>
