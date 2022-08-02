@@ -54,6 +54,28 @@ function! SetGitDir()
 		cd `=gitdir`
 	endif
 endfunction
+function! MyOpenFile()
+	let filename = expand('<cfile>')
+	if !empty(filename)
+		execute ":FZF -e -1 -q " . expand('<cfile>') . "$"
+	endif
+endfunction
+function! MySwitch()
+	" get the current file path as a list, separated by directory
+	let path_components = split(@%, '/')
+	" filter out any folders with the provided names, since they'll be different for the source and header path
+	call filter(path_components, 'index(["src", "cpp", "include", "libdetail"], v:val) == -1')
+	" deduplicate, in case part of the path is duplicated (eg src/include/src/whatever.h)
+	let dedup = filter(copy(path_components), 'index(path_components, v:val, v:key+1) == -1')
+	" swap out the extension between source and header
+	let source_ext = ["cpp", "c", "ipp"]
+	let header_ext = ["hpp", "h"]
+	if index(source_ext, expand('%:e')) != -1
+		execute ":FZF -1 -q " . substitute(join(dedup, '/'), '\..*$', '', '') . "\\ " . join(header_ext, "$\\ |\\ ") . "$"
+	elseif index(header_ext, expand('%:e')) != -1
+		execute ":FZF -1 -q " . substitute(join(dedup, '/'), '\..*$', '', '') . "\\ " . join(source_ext, "$\\ |\\ ") . "$"
+	endif
+endfunction
 let g:gitgutter_enabled = 0
 call pathogen#infect()
 autocmd ColorScheme * hi Sneak      guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
@@ -66,17 +88,10 @@ autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 color jellybeans
 
 map <MiddleMouse> <Nop>
-nmap <silent> <C-Left> :vertical resize -1<CR>
-nmap <silent> <C-Right> :vertical resize +1<CR>
-nmap <silent> <C-Up> :resize -1<CR>
-nmap <silent> <C-Down> :resize +1<CR>
 inoremap ii <Esc>
 vnoremap ii <Esc>
-nmap <silent> <leader>h :noh<CR>
-nmap <silent> <leader>hh :noh<CR>
-nmap <silent> <leader>s :FSHere<CR>
-nmap <silent> <leader>n :NERDTreeToggle<CR>
-nmap <silent> <leader>hg :GitGutterToggle<CR>
+nmap <silent> <leader>h :set hlsearch! hlsearch?<CR>
+nmap <silent> <leader>s :call MySwitch()<CR>
 nmap <silent> <leader>w :BW<CR>
 nmap <silent> <leader>q :BW!<CR>
 nmap <silent> <leader>u :MundoToggle<CR>
@@ -92,13 +107,13 @@ nmap <silent> ]t :bn<CR>
 nmap <silent> [t :bp<CR>
 nmap <silent> <C-t> :FZF<CR>
 nmap <silent> <leader>t :FZF %:p:h<CR>
-nmap <silent> <leader>T :FZF %:p:h/..<CR>
 nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :BLines<CR>
 nmap <silent> <C-k> :Lines<CR>
 nmap <silent> <C-j> :BLines <C-r><C-w><CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
+nmap <silent> gff :call MyOpenFile()<CR>
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 if executable('rg')
@@ -130,7 +145,6 @@ while c < 100
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
-let NERDTreeMouseMode=2
 let g:mundo_prefer_python3=1
 let g:mundo_preview_bottom = 1
 let g:mundo_right=1
@@ -142,11 +156,6 @@ let g:sneak#label=1
 let g:sneak#use_ic_scs=1
 let g:sneak#prompt="Sneak>"
 let g:over_command_line_key_mappings={ "\<C-g>" : "\<Esc>", }
-let g:gitgutter_sign_added='●'
-let g:gitgutter_sign_removed='●'
-let g:gitgutter_sign_modified='●'
-let g:gitgutter_sign_modified_removed='●_'
-let g:gitgutter_sign_removed_first_line='^^'
 let g:fzf_layout = { 'down': '~40%' }
 set completeopt=longest,menuone,preview
 set mouse=
