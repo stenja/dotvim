@@ -17,6 +17,7 @@ set cursorline
 set encoding=utf-8
 set guifont=DejaVu\ Sans\ Mono\ 9,Consolas:h9:cANSI
 set scrolloff=2
+set nostartofline
 if !isdirectory($HOME."/.tmpvim/swap")
 	call mkdir($HOME."/.tmpvim/swap", "p")
 endif
@@ -90,7 +91,7 @@ color jellybeans
 map <MiddleMouse> <Nop>
 inoremap ii <Esc>
 vnoremap ii <Esc>
-nmap <silent> <leader>h :set hlsearch! hlsearch?<CR>
+nmap <silent> <expr> <leader>h v:hlsearch ? ':noh<CR>' : ':set hlsearch<CR>'
 nmap <silent> <leader>s :call MySwitch()<CR>
 nmap <silent> <leader>w :BW<CR>
 nmap <silent> <leader>q :BW!<CR>
