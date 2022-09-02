@@ -142,6 +142,12 @@ while c < 100
 	execute "nmap <silent> <leader>" . c . " :b" . c . "<CR>"
 	let c += 1
 endwhile
+command TS execute ':silent !tig status' | execute ':silent redraw!'
+command TB execute ':silent !tig blame +'.line('.').' -- %' | execute ':silent redraw!'
+command TL execute ':silent !tig' | execute ':silent redraw!'
+command TF execute ':silent !tig -- %' | execute ':silent redraw!'
+command GC execute ':silent !git commit -v' | execute ':silent redraw!'
+command GL execute ':!git ln 30'
 let g:mundo_prefer_python3=1
 let g:mundo_preview_bottom = 1
 let g:mundo_right=1
