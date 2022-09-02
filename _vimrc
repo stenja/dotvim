@@ -77,14 +77,10 @@ function! MySwitch()
 		execute ":FZF -1 -q " . substitute(join(dedup, '/'), '\..*$', '', '') . "\\ " . join(source_ext, "$\\ |\\ ") . "$"
 	endif
 endfunction
-let g:gitgutter_enabled = 0
 call pathogen#infect()
 autocmd ColorScheme * hi Sneak      guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
 autocmd ColorScheme * hi SneakScope guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
 autocmd ColorScheme * hi SneakLabel guifg=magenta guibg=#303030 ctermfg=magenta ctermbg=236
-autocmd ColorScheme * hi GitGutterAdd		ctermfg=DarkGreen
-autocmd ColorScheme * hi GitGutterChange	ctermfg=DarkBlue
-autocmd ColorScheme * hi GitGutterDelete	ctermfg=DarkRed
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 color jellybeans
 
