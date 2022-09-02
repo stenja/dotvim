@@ -107,7 +107,6 @@ nmap <silent> <leader>t :FZF %:p:h<CR>
 nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :BLines<CR>
 nmap <silent> <C-k> :Lines<CR>
-nmap <silent> <C-j> :BLines <C-r><C-w><CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap <silent> gff :call MyOpenFile()<CR>
@@ -129,6 +128,7 @@ vmap <silent> <leader>J y:execute 'Find (?-i)\b'.expand("<C-r>"").'\b'<CR>
 " find word under cursor, only look in current buffer's directory
 nmap <silent> <leader><C-j> :LFind <C-r><C-w><CR>
 vmap <silent> <leader><C-j> y:LFind <C-r>"<CR>
+nmap <silent> <C-j> :execute 'LFind (?-i)\b'.expand("<cword>").'\b'<CR>
 nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
 nmap <silent> <leader><C-g> :execute 'LFind ' . input('Find/')<CR>
 nmap <silent> <BS> <C-^>
