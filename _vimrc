@@ -106,7 +106,9 @@ nmap <silent> <C-t> :FZF<CR>
 nmap <silent> <leader>t :FZF %:p:h<CR>
 nmap <silent> <C-b> :Buffers<CR>
 nmap <silent> <C-l> :BLines<CR>
+nmap <silent> <leader><C-l> :execute 'BLines '.expand("<cword>")<CR>
 nmap <silent> <C-k> :Lines<CR>
+nmap <silent> <leader><C-k> :execute 'Lines '.expand("<cword>")<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap <silent> gff :call MyOpenFile()<CR>
@@ -121,16 +123,16 @@ else
 endif
 " find word under cursor
 nmap <silent> <leader>j :Find <C-r><C-w><CR>
-vmap <silent> <leader>j y:Find <C-r>"<CR>
 " find word under cursor - case sensitive, whole world only
 nmap <silent> <leader>J :execute 'Find (?-i)\b'.expand("<cword>").'\b'<CR>
-vmap <silent> <leader>J y:execute 'Find (?-i)\b'.expand("<C-r>"").'\b'<CR>
 " find word under cursor, only look in current buffer's directory
 nmap <silent> <leader><C-j> :LFind <C-r><C-w><CR>
-vmap <silent> <leader><C-j> y:LFind <C-r>"<CR>
 nmap <silent> <C-j> :execute 'LFind (?-i)\b'.expand("<cword>").'\b'<CR>
 nmap <silent> <leader>g :execute 'Find ' . input('Find/')<CR>
 nmap <silent> <leader><C-g> :execute 'LFind ' . input('Find/')<CR>
+vmap <silent> <leader>j y:Find <C-r>"<CR>
+vmap <silent> <leader>J y:execute 'Find (?-i)\b'.expand("<C-r>"").'\b'<CR>
+vmap <silent> <leader><C-j> y:LFind <C-r>"<CR>
 nmap <silent> <BS> <C-^>
 let c=1
 while c < 10
@@ -143,7 +145,7 @@ while c < 100
 	let c += 1
 endwhile
 command TS execute ':silent !tig status' | execute ':silent redraw!'
-command TB execute ':silent !tig blame +'.line('.').' -- %' | execute ':silent redraw!'
+command TB execute ':silent !tig blame -C +'.line('.').' -- %' | execute ':silent redraw!'
 command TL execute ':silent !tig' | execute ':silent redraw!'
 command TF execute ':silent !tig -- %' | execute ':silent redraw!'
 command GC execute ':silent !git commit -v' | execute ':silent redraw!'
